@@ -135,12 +135,12 @@ vi test_configurations.json # modify test config file to include your storage ac
 To build sample code:
 ```bash
 CASABLANCA_DIR=<path to Casablanca> CXX=g++-4.8 cmake .. -DCMAKE_BUILD_TYPE=Release -DBUILD_SAMPLES=ON
+vi ../samples/SamplesCommon/samples_common.h # modify connection string to include your storage account credentials
 make
 ```
 To run the samples:
 ```bash
 cd Binaries
-vi ../samples/SamplesCommon/samples_common.h # modify connection string to include your storage account credentials
 ./samplesblobs            # run the blobs sample
 ./samplesjson             # run the tables sample with JSON payload
 ./samplestables           # run the tables sample
